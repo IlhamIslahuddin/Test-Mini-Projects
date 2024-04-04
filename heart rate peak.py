@@ -2,22 +2,19 @@
 #A "peak" is defined by a point which is higher than the W number of points to its left and higher than or equal to the W number of points to its right.
 
 def is_peak_at(data, i, w):
-    if i < w or i > (len(data)-w):
+    if i < w or i >= (len(data)-w):
         return False
-    for x in range(len(data)):
-        if i < w:
-            return False
-        elif i > (len(data)-w):
-            return False
-        else:
-            if data[i] > data[i-2] and data[i] > data [i-1]:
-                if data[i] >= data[i+2] and data[i] >= data[i+1]:
-                    print ("peak at: ",data[i],i)
-                    return True
-                else:
-                  return False
+    else:
+        for j in range(1,w+1):                 
+            if data[i] > data[i-j]:
+                pass
             else:
-                 return False
+                return False
+            if data[i] >= data[i+j]:
+                pass               
+            else:
+                return False
+        return True
 
 
 def count_laps(data, w):
@@ -93,14 +90,15 @@ if __name__ == "__main__":
                (data3, peaksat3), (data4, peaksat4), (data5, peaksat5),
                (data6, peaksat6)]
     all_right = tests_for_hr_data(w2_data, 2)
-    #w1_data = w2_data[:]
-    #w1_data[1] = (data1, [2, 6, 8])
-    #w1_data[5] = (data5, [1])
-    #all_right = tests_for_hr_data(w1_data, 1) and all_right
-    #w4_data = [(data0, []), (data1, []), (data2, [4]),
-    #           (data3, []), (data4, []), (data5, []),
-    #           (data6, [])]
-    #all_right = tests_for_hr_data(w4_data, 4) and all_right
+    w1_data = w2_data[:]
+    w1_data[1] = (data1, [2, 6, 8])
+    w1_data[5] = (data5, [1])
+    all_right = tests_for_hr_data(w1_data, 1) and all_right
+    w4_data = [(data0, []), (data1, []), (data2, [4]),
+              (data3, []), (data4, []), (data5, []),
+              (data6, [])]
+    all_right = tests_for_hr_data(w4_data, 4) and all_right
     if not all_right:
         print("Failed one or more tests!")
     pass
+
