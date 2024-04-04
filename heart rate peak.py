@@ -1,4 +1,5 @@
 #heart rate is monitored from a person running up and down (a lap) a set of stairs. array data shows readings taken every second. Includes checking system code provided by Coursera.
+#A "peak" is defined by a point which is higher than the W number of points to its left and higher than or equal to the W number of points to its right.
 
 def is_peak_at(data, i, w):
     if i < w or i > (len(data)-w):
