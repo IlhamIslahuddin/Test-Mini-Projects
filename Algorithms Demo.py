@@ -29,6 +29,8 @@ def demo_algorithms():
         print ("2 was inputted, the phrase was not printed.")
     else:
         print ("Input was not recognised. Moving on...")
+    time.sleep(2.5)
+    print ("Selection can also be condition-based.")
     print ("--------------------------------------------------------------------------------------------")
     time.sleep(2.5)
     print ("Next is: 'Repetition'/'Iteration'. The action of repeating a step more than once.")
