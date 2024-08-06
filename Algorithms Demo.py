@@ -50,6 +50,7 @@ def demo_algorithms():
     variable = input("Whatever you type next will be stored in a variable and printed again. ")
     time.sleep(2.5)
     print (variable)
+    print ("--------------------------------------------------------------------------------------------")
     time.sleep(3)
     print ("End of demonstration.")
 
