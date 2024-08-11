@@ -1,6 +1,6 @@
 import time
 def demo_algorithms():
-    print ("Welcome User. This is a function designed to demonstrate the 4 basic principles of algorithms.")
+    print ("Welcome User. This is a function designed to demonstrate the 4 basic principles of \33[1malgorithms\33[0m.")
     time.sleep(3)
     print ("If you encounter any errors, clear the terminal and run the code again.")
     time.sleep(3)
