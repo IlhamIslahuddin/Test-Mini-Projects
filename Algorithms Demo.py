@@ -37,7 +37,6 @@ def demo_algorithms():
             valid = True
         else:
             print ("Input was not recognised. Try again.")
-            
     time.sleep(2)
     print ("Selection can also be condition-based.")
     time.sleep(1)
