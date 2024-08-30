@@ -12,6 +12,7 @@ def search_monster():
             break
     if found == False:
         print (f"Couldnt find a monster named {searching_for}.")
+    file.close()
 
 if __name__ == "__main__":
     search_monster()
