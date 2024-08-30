@@ -8,6 +8,8 @@ def create_dicitonary(file):
         ## delimiter depends on how items are seperated
         dict[split[0]] = (split[1::])
     item = (dict.get("key", "default"))
+    print (item)
+    return dict
         
 if __name__ == "__main__":
     create_dicitonary("file name") 
