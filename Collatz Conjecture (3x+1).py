@@ -26,7 +26,7 @@ def Collatz_Conjecture():
             print (f"->[{num}]")
             operations += 1
             print ("~~1 has been reached twice, proving that a loop will continue and that the positive integer inputted has reached 1.~~")
-            print (f"Reached 1 after {operations} operations")
+            print (f"Reached 1 after {operations - 3} operations (excluding the last 4-2-1 loop).")
             break
         elif num == 1:
             counter += 1
