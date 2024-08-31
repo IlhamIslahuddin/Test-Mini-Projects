@@ -1,5 +1,5 @@
 import time
-##Note: Output may reach terminal max lines
+##Terminal max scrollback may need to be changed as output can exceed 100 lines
 def Collatz_Conjecture():
     print ("______________________________________________________________________________________________________________________________________________________")
     print ("Collatz Conjecture AKA 3x+1: Asks whether repeating two arithmetic operations will eventually transform every positive integer into the number 1.")
@@ -19,11 +19,11 @@ def Collatz_Conjecture():
             valid = True
         except:
             print ("!Number inputted was not a positive integer.")
-    for i in range(9999999999999999999):
+    for i in range(99999999999999999999999):
         if counter == 2:
             print (f"{num} / 2 =")
             num = num // 2
-            print (f"[{num}]")
+            print (f"->[{num}]")
             operations += 1
             print ("~~1 has been reached twice, proving that a loop will continue and that the positive integer inputted has reached 1.~~")
             print (f"Reached 1 after {operations} operations")
@@ -32,24 +32,24 @@ def Collatz_Conjecture():
             counter += 1
             print (f"3({num}) + 1 =")
             num = (num*3) + 1
-            print (f"[{num}]")
+            print (f"->[{num}]")
             operations += 1
         if num % 2 == 0:
             print (f"{num} / 2 =")
             num = num // 2
-            print (f"[{num}]")
+            print (f"->[{num}]")
             operations += 1
         elif num % 2 == 1:
             print (f"3({num}) + 1 =")
             num = (num*3) + 1
-            print (f"[{num}]")
+            print (f"->[{num}]")
             operations += 1
         elif num == 1:
             counter += 1
             print (counter, "counter")
             print (f"3({num}) + 1 =")
             num = (num*3) + 1
-            print (f"[{num}]")
+            print (f"->[{num}]")
             operations += 1
 
 if __name__ == "__main__":
