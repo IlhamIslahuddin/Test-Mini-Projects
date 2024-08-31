@@ -1,4 +1,4 @@
-##creates a dictionary from a file
+##creates a dictionary from a text file
 def create_dicitonary(file):
     dict = {}
     f = open(file,"r")
