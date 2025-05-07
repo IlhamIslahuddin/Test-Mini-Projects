@@ -1,4 +1,5 @@
-import time
+from time import sleep
+
 ##Terminal max scrollback may need to be changed as output can exceed 100 lines
 def Collatz_Conjecture():
     print ("______________________________________________________________________________________________________________________________________________________")
@@ -6,7 +7,7 @@ def Collatz_Conjecture():
     print ("If the number, x, is odd: apply the operation 3x + 1.")
     print ("If the number, x, is even: apply the operation x / 2.")
     print ("______________________________________________________________________________________________________________________________________________________")
-    time.sleep(2)
+    sleep(2)
     operations = 0
     valid = False
     counter = 1
@@ -30,26 +31,22 @@ def Collatz_Conjecture():
             break
         elif num == 1:
             counter += 1
-            print (f"3({num}) + 1 =")
+            print (f"3({num}) + 1 = [{(num*3)+1}]")
             num = (num*3) + 1
-            print (f"->[{num}]")
             operations += 1
         if num % 2 == 0:
-            print (f"{num} / 2 =")
+            print (f"{num} / 2 = [{num // 2}]")
             num = num // 2
-            print (f"->[{num}]")
             operations += 1
         elif num % 2 == 1:
-            print (f"3({num}) + 1 =")
+            print (f"3({num}) + 1 = [{(num*3)+1}]")
             num = (num*3) + 1
-            print (f"->[{num}]")
             operations += 1
         elif num == 1:
             counter += 1
             print (counter, "counter")
-            print (f"3({num}) + 1 =")
+            print (f"3({num}) + 1 = [{(num*3)+1}]")
             num = (num*3) + 1
-            print (f"->[{num}]")
             operations += 1
 
 if __name__ == "__main__":
